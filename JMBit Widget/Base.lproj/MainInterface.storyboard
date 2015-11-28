@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C27e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="M4Y-Lb-cyx">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$592.12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUe-j7-STq">
+                                <rect key="frame" x="36" y="10" width="63" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="63" id="tHe-Kp-wTG"/>
+                                    <constraint firstAttribute="height" constant="21" id="zu8-SI-089"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.25882352939999997" green="0.56862745100000001" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1.23" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1f-ir-feE">
+                                <rect key="frame" x="209" y="10" width="43" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="Afv-sj-AYG"/>
+                                    <constraint firstAttribute="height" constant="21" id="Sfi-Vq-1XV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.52156862745098043" green="0.74901960784313726" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJx-sX-xct">
+                                <rect key="frame" x="260" y="-1" width="44" height="44"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3eH-7p-GhC"/>
+                                    <constraint firstAttribute="width" constant="44" id="HUA-Lj-uFu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" image="caret-notification-center">
+                                    <color key="titleShadowColor" red="0.0" green="0.6705882353" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleGraph:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="JMy-FV-BQC"/>
+                                </connections>
+                            </button>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rC-gG-YCZ" customClass="JBLineChartView">
+                                <rect key="frame" x="-4" y="52" width="328" height="98"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="98" id="tu9-F9-nqc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <constraints>
+                            <constraint firstItem="S1f-ir-feE" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="10" id="Hn7-b9-0wn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RJx-sX-xct" secondAttribute="trailing" id="L21-f6-aWi"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="5rC-gG-YCZ" secondAttribute="bottom" id="NFP-Jc-vro"/>
+                            <constraint firstItem="UUe-j7-STq" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" constant="20" id="V5Z-0X-lgb"/>
+                            <constraint firstItem="RJx-sX-xct" firstAttribute="leading" secondItem="S1f-ir-feE" secondAttribute="trailing" constant="8" id="ZEf-JE-IH8"/>
+                            <constraint firstItem="RJx-sX-xct" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="-1" id="ZjX-mo-fw3"/>
+                            <constraint firstItem="5rC-gG-YCZ" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" constant="-20" id="dsu-x7-lhW"/>
+                            <constraint firstItem="UUe-j7-STq" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="10" id="x4C-cP-LML"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5rC-gG-YCZ" secondAttribute="trailing" constant="-20" id="xjA-t2-j3T"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="150"/>
+                    <connections>
+                        <outlet property="lineChartHeightContraint" destination="tu9-F9-nqc" id="gIR-tH-6YV"/>
+                        <outlet property="priceChangeLabel" destination="S1f-ir-feE" id="okV-MW-hoe"/>
+                        <outlet property="priceLabel" destination="UUe-j7-STq" id="0iW-6e-OK9"/>
+                        <outlet property="priceLineChartView" destination="5rC-gG-YCZ" id="ozC-Uw-NxT"/>
+                        <outlet property="toggleGrapButton" destination="RJx-sX-xct" id="5CB-x4-YfA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26" y="182"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="caret-notification-center" width="13" height="9"/>
+    </resources>
+</document>
